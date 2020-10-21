@@ -1,7 +1,7 @@
 JavaCPP
 =======
 
-[![Gitter](https://badges.gitter.im/bytedeco/javacpp.svg)](https://gitter.im/bytedeco/javacpp) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.bytedeco/javacpp/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.bytedeco/javacpp) [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.bytedeco/javacpp.svg)](http://bytedeco.org/builds/) [![Build Status](https://travis-ci.org/bytedeco/javacpp.svg?branch=master)](https://travis-ci.org/bytedeco/javacpp)
+[![Gitter](https://badges.gitter.im/bytedeco/javacpp.svg)](https://gitter.im/bytedeco/javacpp) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.bytedeco/javacpp/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.bytedeco/javacpp) [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.bytedeco/javacpp.svg)](http://bytedeco.org/builds/) [![Build Status](https://travis-ci.org/bytedeco/javacpp.svg?branch=master)](https://travis-ci.org/bytedeco/javacpp) <sup>Commercial support:</sup> [![xscode](https://img.shields.io/badge/Available%20on-xs%3Acode-blue?style=?style=plastic&logo=appveyor&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////////VXz1bAAAAAJ0Uk5T/wDltzBKAAAAlUlEQVR42uzXSwqAMAwE0Mn9L+3Ggtgkk35QwcnSJo9S+yGwM9DCooCbgn4YrJ4CIPUcQF7/XSBbx2TEz4sAZ2q1RAECBAiYBlCtvwN+KiYAlG7UDGj59MViT9hOwEqAhYCtAsUZvL6I6W8c2wcbd+LIWSCHSTeSAAECngN4xxIDSK9f4B9t377Wd7H5Nt7/Xz8eAgwAvesLRjYYPuUAAAAASUVORK5CYII=)](https://xscode.com/bytedeco/javacpp)
 
 
 Introduction
@@ -33,7 +33,7 @@ We can also have everything downloaded and installed automatically with:
  * Gradle (inside the `build.gradle` file)
 ```groovy
   dependencies {
-    compile group: 'org.bytedeco', name: 'javacpp', version: '1.5.4'
+    implementation group: 'org.bytedeco', name: 'javacpp', version: '1.5.4'
   }
 ```
 
@@ -406,7 +406,7 @@ $ java -jar libs/javacpp.jar -classpath bin/ -classpath bin/classes/ \
 > -properties <android-arm|android-x86> -Dplatform.root=/path/to/android-ndk/ \
 > -Dplatform.compiler=/path/to/<arm-linux-androideabi-g++|i686-linux-android-g++> -d libs/<armeabi|x86>/
 ```
-To make everything automatic, we may also insert that command into the `build.xml` file. Alternatively, for integration with Android Studio, we might be able to use the [Maven plugin](http://bytedeco.org/javacpp/apidocs/org/bytedeco/javacpp/tools/BuildMojo.html) with the [build system based on Gradle](http://tools.android.com/tech-docs/new-build-system/user-guide).
+To make everything automatic, we may also insert that command into the `build.xml` file. Alternatively, for integration with Android Studio, we can use [Gradle JavaCPP](https://github.com/bytedeco/gradle-javacpp).
 
 
 Similarly for RoboVM, assuming that the compiled classes are in the `classes` subdirectory:
