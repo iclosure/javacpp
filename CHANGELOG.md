@@ -1,4 +1,11 @@
 
+ * Prevent `Builder` from linking with `-framework JavaVM` when a path to the JVM library is found
+ * Replace `requires` with `requires static` in JPMS `.platform` module ([pull #436](https://github.com/bytedeco/javacpp/pull/436))
+ * Let `Parser` output `Info.javaText` even for template declarations with no instances
+ * Prevent `Tokenizer` from using `long` literals for unsigned integers of 16 bits or less
+ * Ensure `Parser` considers `>=` and `<=` as single tokens to prevent failures
+ * Make `Parser` use `Info.cppTypes` to override the type of `enum` values
+ * Fix `Parser` not using the correct `Info.pointerTypes` for `const&` declarations
  * Use pthreads in `Generator` to detach automatically native threads on exit for Linux and Mac as well
  * Let `Loader.load()` always succeed on optional libraries only available with extensions
  * Fix `Builder.addProperty()` incorrectly appending values together
